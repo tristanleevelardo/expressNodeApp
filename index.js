@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 
+//Add this
+const http = require('http');
+const server = http.createServer(app);
+
 app.get('/', (req, res) => {
     res.send(`
       <!DOCTYPE html>
