@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - VelardoExpress
+name: Build and deploy Node.js app to Azure Web App - expressNodeApp
 
 on:
   push:
@@ -57,15 +57,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1614150EBCE1469BA42597C69279A807 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_20C7ECF48F59483393B0B895E1701061 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0E399F18D16E484497766EE343F77ADD }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_83934DE0C52644278B49A8AD835C6F90 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0B8553A14CDB4CB297E50227225AC2D7 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_7754465EAEC7414B900958418BC2AAAE }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'VelardoExpress'
+          app-name: 'expressNodeApp'
           slot-name: 'Production'
           package: .
           
